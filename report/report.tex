@@ -1,0 +1,48 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage[portuges,brazil,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{float}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\usepackage{subcaption}
+\usepackage[style=mla,guessmedium=false,backend=bibtex]{biblatex}
+\addbibresource{report.bib}
+
+\begin{document}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\refname}{Referências}
+
+\title{Técnicas de Clusterização e Visualização de Dados}
+
+\author{\IEEEauthorblockN{Carolina F. Cuba}
+\IEEEauthorblockA{
+226004 \\
+carolinacuba23@gmail.com}
+\and
+\IEEEauthorblockN{Leonardo de Melo Joao}
+\IEEEauthorblockA{
+228118 \\
+l228118@g.unicamp.br}}
+
+\maketitle
+
+\section{Introdução}	
+	
+	
+\section{K-means}
+	\subsection{Definindo o valor do k}
+	Foram utilizadas duas métricas para definir o melhor valor de k: (1) coeficiente de silhueta; (2) curva do cotovelo.
+	Com $80%$ dos dados, os algorítmos encontraram um minimo local e um máximo local na curva de cotovelo e coeficiente de silhueta respectivamente, procurando possíveis $k$ com passo de 10. Após alguns passos os algoritmos saem desses extremos locais e convergem sempre para resultados melhores conforme o número de clusters aumenta. Obviamente, com apenas 1 ou 2 elementos por cluster, essas métricas obteriam resultados muito satisfatórios, mas o propósito de clusterização seria completamente perdido. Nesse cenário, foram executados testes com passo 1 para determinar exatamente qual era o melhor valor encontrados nos extremos locais.
+	O mínimo encontrado na curva de cotovelo foi de $0.663$ para $k = 77$, enquanto o valor máximo encontrado no coeficiênte de silhueta foi de $0.047$ para $k = 76$. Ambos resultados são ruins, porém decidimos analisá-los 
+
+\printbibliography
+
+\end{document}
